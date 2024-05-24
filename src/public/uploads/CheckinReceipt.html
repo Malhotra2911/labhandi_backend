@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://kundalpur.techjainsupport.co.in/uploads/images/Noto_Sans_Devanagari.css" rel="stylesheet">
+    <title>OnlineReceipt</title>
+    <style>
+      body{
+        font-family: 'Noto Sans Devanagari', Arial, sans-serif;
+      }
+      .main_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-certificate {
+        width: 62%;
+        height: 88rem;
+        border: 0.0001px solid gray;
+        margin-top: -0.5%;
+      }
+
+      .main-certificate .topinfo-flex {
+        display: flex;
+        color: rgb(249, 5, 176);
+        justify-content: space-between;
+        padding: 0px 8px;
+      }
+      .main-certificate .topinfo-flex p {
+        color: rgb(249, 5, 176);
+        font-size: 16px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-head {
+        width: 100%;
+        height: 90px;
+      }
+      .main-head .main-head-container {
+        background-image: url("./frame1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+      .main-head .main-head-container .head-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 4rem;
+      }
+      .main-head .main-head-container .head-name p,
+      h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-head .main-head-container .head-name h4 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-head .main-head-container .head-name h2 {
+        color: blue;
+        word-spacing: 10px;
+        font-size: 29px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-head .main-head-container .head-contact {
+        padding-right: 1rem;
+      }
+      .main-head .main-head-container .head-contact p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-certificate .reciptimg {
+        width: 100%;
+
+        background-image: url("./receipt.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .main-certificate .reciptimg .reciptbody {
+        display: flex;
+
+        /*height: 156px */
+        /* border-bottom: 0.1px solid; */
+        /* border-top: 0.1px solid; */
+        padding: 1rem 1rem 0rem 1rem;
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+        justify-content: space-between;
+      }
+      .main-certificate .reciptimg .reciptbody .leftdata {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 50%;
+      }
+      .main-certificate .reciptimg .reciptbody .leftdata .leftitems {
+        display: flex;
+        gap: 8px;
+      }
+
+      .font_bold_in_donation {
+        font-weight: 600 !important;
+      }
+      .main-certificate .reciptimg .reciptbody .rightdata {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      .main-certificate .reciptimg .reciptbody .rightdata .rightitems {
+        display: flex;
+        gap: 8px;
+      }
+      .commanh2 {
+        font-weight: 200;
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      .boldh2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      .warp_text {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+      }
+
+      .main-certificate .reciptimg .rightitems2 {
+        gap: 0px;
+        display: flex;
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+        align-items: center;
+      }
+
+      .main-certificate .bankdetail-container .bankdetails {
+        width: 100%;
+      }
+
+      .main-certificate .bankdetail-container .bankdetails .banks1,
+      .banks2,
+      .banks3,
+      h5 {
+        color: #c7630b;
+        font-size: 8px;
+      }
+      .main-certificate .bankdetail-container .bankdetails {
+        display: flex;
+        width: 92%;
+        margin: 0px auto;
+        border-top: 0.1px solid rgba(0, 0, 0, 0.344);
+        background-color: #e0d1d19e;
+
+        border: 0.1px solid black;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        padding: 0px 34px;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks1 {
+        width: 36%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks2 {
+        width: 45%;
+        border-left: 0.1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks3 {
+        width: 38%;
+        border-left: 0.1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks1,
+      .banks2,
+      .banks3,
+      h5 {
+        color: #c7630b;
+        font-size: 17px;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks1,
+      .banks2,
+      .banks3,
+      h4 {
+        color: #f64f12d3;
+        font-size: 17px;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks1,
+      .banks2,
+      .banks3,
+      p {
+        color: #070200d3;
+        font-size: 17px;
+        font-weight: 510;
+      }
+      .main-certificate .reciptimg .bankjankari {
+        width: 100%;
+
+        padding-top: 8px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .main-certificate .reciptimg .bankjankari h3 {
+        background: #f9da90cf;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        width: 40%;
+        text-align: center;
+        padding: 2px 0px 1px 0px;
+        margin: 0.1px auto;
+        color: rgb(220, 68, 202);
+      }
+      .mr0 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .mainbank {
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+      }
+
+      .main-certificate .note {
+        margin: 0;
+        border: none;
+        padding: 0.2px 8px;
+        text-align: center;
+      }
+      .main-certificate .note p {
+        font-size: 10px;
+        font-weight: 690;
+      }
+
+      .main-certificate .reciept-footer {
+        background-image: url("./frame2.png");
+        height: 27px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 92.4%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.6px 36px;
+      }
+      .main-certificate .reciept-footer span {
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+      }
+      .main-certificate .reciept-footer p {
+        color: yellow;
+        font-size: 19px;
+      }
+      .main-certificate .signature-point {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        align-items: center;
+      }
+      .main_div_signature img {
+        width: 100%;
+        height: 20px;
+      }
+      .title_div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(1, 176, 241);
+        width: 100%;
+        margin-top: 1rem;
+      }
+      .title_div h1 {
+        font-size: 15px;
+      }
+      .innear_div_texx {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+        padding-right: 2rem;
+      }
+      .innear_div_texx_ddd {
+        display: flex;
+
+        padding-left: 2rem;
+      }
+      .main_left {
+        padding-left: 2rem;
+      }
+      .lineheight {
+        line-height: 16px;
+        font-weight: 800;
+      }
+      .yyy_text_div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+      }
+      .table_ddd {
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+        font-family: 'Noto Sans Devanagari', Arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .table_tddd {
+        border: 1px solid gray;
+        text-align: center;
+        padding: 8px;
+      }
+      .lineheight10 {
+        line-height: 23px;
+        font-weight: 600;
+      }
+      .note_text {
+        background-color: #ffc100;
+        padding: 1rem;
+      }
+      .note_text h1 {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .h2text {
+        color: #f64f12d3;
+        text-align: center;
+        font-size: 23px;
+      }
+      .main-certificatenote {
+        margin: 0;
+        border: none;
+        padding: 0.2px 8px;
+        /* text-align: center; */
+        position: relative;
+      }
+      .main-certificatenote p {
+        line-height: 38px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .absolute_text {
+        border: 3px solid red;
+        padding: absolute;
+        top: 5rem;
+        width: 30%;
+        position: absolute;
+        left: 67%;
+        padding: 0.5rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+      }
+      .reciept-footer-style {
+        background-color: #ffc100;
+      }
+      .reciept-footer-style p {
+        text-align: center;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="main-certificate">
+        <div class="topinfo-flex">
+          <p>E-mail:badebaba.kundalpur@gmail.com</p>
+          <p>॥ श्री बड़े बाबा नम:॥</p>
+          <p>Web:www.shreebadebaba.com</p>
+        </div>
+        <div class="main-head">
+          <div class="main-head-container">
+            <span class="hedad-sn">
+              <p>&nbsp;</p>
+              <h4>&nbsp;</h4>
+            </span>
+            <span class="head-name">
+              <h2>श्री दिगम्बर जैन सिद्धक्षेत्र कुण्डलगिरि</h2>
+              <p>(सार्व, न्यास क्रं. 17 - ह)</p>
+              <h4>पिनकोड - 470773, तहसील पटेरा, जिला-दमोह (म.प्र.)</h4>
+            </span>
+            <span class="head-contact">
+              <p>7771835891</p>
+              <p>7771834880</p>
+            </span>
+          </div>
+          <div class="reciptimg">
+            <div class="rightitems2">
+              <div class="title_div">
+                <h1>यात्री आगमन रसीद (Cash)</h1>
+              </div>
+            </div>
+            <div class="innear_div_texx">
+              <div class="innear_div_texx_ddd">
+                <div>
+                  <p class="lineheight">आवास क्र-</p>
+                  <p class="lineheight">यात्री का नाम-</p>
+                  <p class="lineheight">पिता/पति श्री-</p>
+                </div>
+                <div class="main_left">
+                  <p class="lineheight"><%= currentRoomsData[0].booking_id %></p>
+                  <p class="lineheight"><%= currentRoomsData[0].name %></p>
+                  <p class="lineheight"><%= currentRoomsData[0].Fname %></p>
+                </div>
+              </div>
+              <div class="innear_div_texx_ddd">
+                <div>
+                  <p class="lineheight">आगमन दिनांक-</p>
+
+                  <p class="lineheight">मोबाईल न-</p>
+                  <p class="lineheight">स्टे :</p>
+                  <p class="lineheight">पता :</p>
+                </div>
+                <div class="main_left">
+                  <p class="lineheight"><%= new Date(new Date(currentRoomsData[0].date).getTime() + 5 * 60 * 60 * 1000 + 30 * 60 * 1000).toLocaleDateString('en-GB') %> / <%= currentRoomsData[0].time %></p>
+
+                  <p class="lineheight"><%= currentRoomsData[0].contactNo %></p>
+                  <p class="lineheight"><%= Math.floor((new Date(currentRoomsData[0].coutDate) - new Date(currentRoomsData[0].date)) / (1000 * 60 * 60 * 24)) %></p>
+                  <p class="lineheight"><%= currentRoomsData[0].address %></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="yyy_text_div">
+              <!-- <p class="lineheight">पता-</p> -->
+              <!-- <p class="lineheight"><%= currentRoomsData[0].address %></p> -->
+              <p class="lineheight">यात्री संख्या - Male: <%= currentRoomsData[0].male %></p>
+              <p class="lineheight">Female: <%= currentRoomsData[0].female %></p>
+              <p class="lineheight">Child: <%= currentRoomsData[0].child %></p>
+              <p class="lineheight">Total: <%= currentRoomsData[0].male + currentRoomsData[0].female + currentRoomsData[0].child %></p>
+            </div>
+
+            <table class="table_ddd">
+              <tbody>
+                <tr>
+                  <td class="table_tddd lineheight10">धर्मशाला नाम</td>
+                  <td class="table_tddd lineheight10">रूम टाईप & फेसिलिटी</td>
+
+                  <td class="table_tddd lineheight10">रुम न</td>
+
+                  <td class="table_tddd lineheight10">सहयोग राशि</td>
+                  <td class="table_tddd lineheight10">अमानत राशि</td>
+                </tr>
+                <tr>
+                  <td class="table_tddd lineheight10"><%= currentRoomsData[0].dharmasalaData.name %></td>
+                  <td class="table_tddd lineheight10"><%= currentRoomsData[0].facility_name %> - <%= currentRoomsData[0].category_name %></td>
+
+                  <td class="table_tddd lineheight10"><%= currentRoomsData[0].roomNumbers %></td>
+
+                  <td class="table_tddd lineheight10"><%= currentRoomsData[0].roomAmountSum %></td>
+
+                  <td class="table_tddd lineheight10"><%= currentRoomsData[0].advanceAmountSum %></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="note_text">
+            <h1>
+                नोट : रूम चेक आउट समय 24 घंटे के पश्चात दूसरे दिन का चार्ज मान्य होगा। रूम केन्सिल एवं बदलने का समय 1 घंटे रहेगा ।
+            </h1>
+          </div>
+          <div class="main-certificatenote">
+            <h1 class="h2text">ऑनलाईन आवास व्यवस्था हेतु नियम/सावधानियां</h1>
+            <p>
+              1. कमरें खुले ना छोड़े, स्वयं के ताले का उपयोग करें, सामान की
+              सुरक्षा स्वयं करें ।
+            </p>
+            <p>
+              2. प्रस्थान से 1 घंटे पूर्व अपनी पर्ची (कमरे) कार्यालय में ले जाकर
+              उसका पूर्ण हिसाब कर लेवें ।
+            </p>
+            <p>
+              3. आवासीय इकायईयों के सभी कमरों में गैस/स्टोव/सिगड़ी/इंडक्शन का
+              प्रयोग वर्जित है ।
+            </p>
+            <p>
+              4. अनजान व्यक्तियों से किसी भी प्रकार की खाद्य सामग्री ना खरीदे
+              अधिकृत दुकानों से ही लेवें ।
+            </p>
+            <p>
+              5. कार्यरत कर्मचारियों को किसी भी प्रकार का ईनाम या प्रलोभन देकर,
+              व्यवस्था खराब ना करें ।
+            </p>
+            <p>
+              6. यात्रीगण को जारी की गई सामग्री खोने/टूटफूट होने की स्थिति में
+              नियमानुसार राशि जमा करानी होगी ।
+            </p>
+            <p>
+              7. आवास (कमरा) खाली करते समय धर्मशाला इंचार्ज (चौकीदार) के
+              हस्ताक्षर पर्ची पर लाने का कष्ट करें, उसके पश्चात ही चेकआउट होगा ।
+            </p>
+            <p>
+              8. यात्रीगण अपने अमूल्य सुझाव श्री दिगम्बर जैन सिद्धक्षेत्र
+              कुण्डलगिरि, कुण्डलपुर के अध्यक्ष/महामंत्री को लिखित में कार्यालय
+              में प्रेषित कर सकते हैं ।
+            </p>
+            <p>
+              9. क्षेत्र में 3 दिन से अधिक ठहरने हेतु प्रबंधक एवं 7 दिन से अधिक
+              ठहरने हेतु अध्यक्ष/महामंत्री जी से लिखित में स्वीकृति आवश्यक है ।
+            </p>
+            <p>
+              10. आवासीय इकाइयों में पॉलीथिन का उपयोग ना करें, साफ-सफाई रखें,
+              आवश्यक्तानुसार जल, बिजली एवं अन्य उपकरणों का उपयोग करें, उपयोग ना
+              होने पर उपकरणों को बंद कर व्यवस्थाओं में सहयोग प्रदान करें ।
+            </p>
+            <p>
+              11. क्षेत्र पर एवं धर्मशाला/आवास में धर्म विरूद्ध कार्य होते पाए
+              जाने पर आवास/कमरा तुरंत खाली करवाने हेतु प्रबंधक को पूर्ण अधिकार
+              हैं, यह पवित्र धार्मिक/सिद्धक्षेत्र है इसकी मर्यादा/पवित्रता बनाए
+              रखना हम सभी का कर्त्तव्य एवं अधिकर है ।
+            </p>
+            <p>
+              12. आवासीय इकाइयों (कमरा) में यदि किसी भी प्रकार के नल/बिजली/सफाई
+              आदि संबंधित कोई भी समस्या हो तो कमरा बुक करवाने के 1 घंटे के अंदर
+              ही कार्यालय में जाकर चेंज करा लेवें अन्यथा 1 घंटे बाद कमरा चेंज
+              (बदला) नहीं जावेगा एवं नियमानुसार सहयोग राशि देय होगी ।
+            </p>
+            <p>
+              13. रूम चेकआउट का समय चेकिन के समय से 24 घंटे तक है उसके पश्चात
+              दूसरे दिन की सहयोग राशि मान्य होगी, रूम बदलने (शिफ्ट) का समय 1
+              घंटे तक ही रहेगा ।
+            </p>
+
+            <div class="absolute_text">
+              <p>
+                क्षेत्र में हो रहे निर्माण कार्य की जानकारी आप कार्यालय से
+                प्राप्त । कर सकते है एवं दान राशि क्षेत्र के बैंक खातों में भी
+                जमा करा सकते है।
+              </p>
+            </div>
+          </div>
+          <div class="reciept-footer-style">
+            <p>
+              मोबाईल : +91-7771834880, +91-7771835891 पर कार्यदिवस में संपर्क कर
+              सकते हैं।
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

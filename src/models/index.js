@@ -1,0 +1,94 @@
+const sequelize = require('../db/db-connection');
+module.exports.userModel = require('./user.model');
+module.exports.otpModel = require('./otp.model');
+module.exports.roleModel = require('./role.model');
+module.exports.usersRolesModel = require('./users_roles.model');
+module.exports.passwordReset = require('./password_reset.model');
+module.exports.donationModel = require('./donationDetail.model');
+module.exports.newDonationModel = require('./donation.model');
+module.exports.donationItem = require('./donationItem.model');
+module.exports.ElecDonationModel = require('./electricDonation.model');
+module.exports.itemList = require('./item.model');
+module.exports.ElecDonationItem = require('./electricDonationItem.model');
+module.exports.Vouchers = require('./voucher.model')
+module.exports.donationTypes = require('./donationTypes.model')
+module.exports.employees = require('./employees.model')
+module.exports.admin = require('./admin.model')
+module.exports.empRoles = require('./employeeRoles.model')
+module.exports.Receipt = require('./Receipts.model')
+module.exports.ManualDonation = require('./manualDonation.model')
+module.exports.ManualDonationItem = require('./manualDonationItems.model')
+module.exports.Checkin = require('./checkin.model')
+module.exports.Rooms = require('./room.model')
+module.exports.RoomCategory = require('./roomCategory.model')
+module.exports.facility = require('./facility.model')
+module.exports.holdIn = require('./holdin.model')
+module.exports.cancelVouchers =  require('./cancelledVouchers.model')
+module.exports.dharmashala = require('./darmashala.model')
+module.exports.canceledCheckins = require('./canceledCheckins.model')
+module.exports.boliHead = require('./boliHead.model')
+module.exports.boli = require('./boli.model')
+module.exports.boliUnit = require('./boliUnit.model')
+module.exports.boliItem = require('./boliItem.model')
+module.exports.trust = require('./trust.model')
+module.exports.boliPayment = require('./boliPayment.model')
+module.exports.trustType = require('./trustType.model')
+module.exports.sadsyaType = require('./sadsyaType.model')
+module.exports.relationshipType = require('./relationshipType.model')
+module.exports.committee = require('./committee.model')
+module.exports.occasionType = require('./occasionType.model')
+module.exports.family = require('./family.model')
+module.exports.familyMembers = require('./familyMembers.model')
+module.exports.vehicleType = require('./vehicleType.model')
+module.exports.vehicle = require('./vehicle.model')
+module.exports.material = require('./material.model')
+module.exports.materialItem = require('./materialItem.model')
+module.exports.employeeType = require('./employeeType.model')
+module.exports.bankName = require('./bankName.model')
+module.exports.department = require('./department.model')
+module.exports.leaveType = require('./leaveType.model')
+module.exports.employeeStatus = require('./employeeStatus.model')
+module.exports.hrEmployee = require('./hrEmployee.model')
+module.exports.boliGroup = require('./boliGroup.model')
+module.exports.boliLedger = require('./boliLedger.model')
+module.exports.boliVoucher = require('./boliVoucher.model')
+module.exports.boliVoucherList = require('./boliVoucherList.model')
+module.exports.employeeLeave = require('./employeeLeave.model')
+module.exports.designation = require('./designation.model')
+module.exports.disableDharamshala = require('./disableDharamshala.model')
+module.exports.employeeAttendance = require('./employeeAttendance.model')
+module.exports.employeeSalary = require('./employeeSalary.model')
+module.exports.expenseGroup = require('./expenseGroup.model')
+module.exports.expenseLedger = require('./expenseLedger.model')
+module.exports.expenseVoucher = require('./expenseVoucher.model')
+module.exports.expenseVoucherList = require('./expenseVoucherList.model')
+module.exports.paymentMode = require('./paymentMode.model')
+module.exports.purchaseRequisition = require('./purchaseRequisition.model')
+module.exports.purchaseRequisitionList = require('./purchaseRequisitionList.model')
+module.exports.purchaseOrder = require('./purchaseOrder.model')
+module.exports.purchaseOrderList = require('./purchaseOrderList.model')
+module.exports.paymentIn = require('./paymentIn.model')
+module.exports.gateEntry = require('./gateEntry.model')
+module.exports.gateEntryList = require('./gateEntryList.model')
+module.exports.invoice = require('./invoice.model')
+module.exports.customWhatsapp = require('./customWhatsapp.model')
+module.exports.expenseHead = require('./expenseHead.model')
+module.exports.supplierName = require('./supplierName.model')
+module.exports.bhojnalay = require('./bhojnalay.model')
+module.exports.bhojnalayHead = require('./bhojnalayHead.model')
+module.exports.uom = require('./uom.model')
+module.exports.paymentType = require('./paymentType.model')
+module.exports.inventory = require('./inventory.model')
+module.exports.inventoryList = require('./inventoryList.model')
+module.exports.stock = require('./stock.model')
+module.exports.itemHead = require('./itemHead.model')
+
+sequelize.sync().then((result) => {
+    console.log('data synced')
+}).catch((e) => {
+    console.log('error in sync', e)
+});
+
+
+
+

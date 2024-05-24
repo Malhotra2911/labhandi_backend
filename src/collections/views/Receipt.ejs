@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnlineReceipt</title>
+    <style>
+      .main_div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .main-certificate {
+        width: 62%;
+        height: 650px;
+        border: 0.0001px solid gray;
+        margin-top: -0.5%;
+      }
+
+      .main-certificate .topinfo-flex {
+        display: flex;
+        color: rgb(249, 5, 176);
+        justify-content: space-between;
+        padding: 0px 8px;
+      }
+      .main-certificate .topinfo-flex p {color: rgb(249, 5, 176);
+         font-size: 16px;
+         margin-top: 0px;
+         margin-bottom: 0px;}
+      .main-head {
+        width: 100%;
+        height: 90px;
+      }
+      .main-head .main-head-container {
+        background-image: url("frame1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+      .main-head .main-head-container .head-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 4rem;
+      }
+      .main-head .main-head-container .head-name p,
+      h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-head .main-head-container .head-name h4 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-head .main-head-container .head-name h2 {
+        color: blue;
+        word-spacing: 10px;
+        font-size: 29px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-head .main-head-container .head-contact {
+        padding-right: 1rem;
+      }
+      .main-head .main-head-container .head-contact p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .main-certificate .reciptimg {
+        width: 100%;
+        background-image: url("receipt.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .main-certificate .reciptimg .reciptbody {
+        display: flex;
+
+        /*height: 156px */
+        /* border-bottom: 0.1px solid; */
+        /* border-top: 0.1px solid; */
+        padding: 1rem 1rem 0rem 1rem;
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+        justify-content: space-between;
+      }
+      .main-certificate .reciptimg .reciptbody .leftdata {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        width: 50%;
+      }
+      .main-certificate .reciptimg .reciptbody .leftdata .leftitems {
+        display: flex;
+        gap: 8px;
+      }
+
+      .font_bold_in_donation {
+        font-weight: 600 !important;
+      }
+      .main-certificate .reciptimg .reciptbody .rightdata {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      .main-certificate .reciptimg .reciptbody .rightdata .rightitems {
+        display: flex;
+        gap: 8px;
+      }
+      .commanh2 {
+        font-weight: 200;
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      .boldh2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+      .warp_text {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+      }
+
+      .main-certificate .reciptimg .rightitems2 {
+        gap: 0px;
+        display: flex;
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        align-items: center;
+      }
+
+      .main-certificate .bankdetail-container .bankdetails {
+        width: 100%;
+      }
+
+      .main-certificate .bankdetail-container .bankdetails .banks1,
+      .banks2,
+      .banks3,
+      h5 {
+        color: #c7630b;
+        font-size: 8px;
+      }
+      .main-certificate .bankdetail-container .bankdetails {
+        display: flex;
+        width: 92%;
+        margin: 0px auto;
+        border-top: 0.1px solid rgba(0, 0, 0, 0.344);
+        background-color: #e0d1d19e;
+
+        border: 0.1px solid black;
+        border-top-left-radius: 28px;
+        border-top-right-radius: 28px;
+        padding: 0px 34px;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks1 {
+        width: 36%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks2 {
+        width: 45%;
+        border-left: 0.1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks3 {
+        width: 38%;
+        border-left: 0.1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks1,
+      .banks2,
+      .banks3,
+      h5 {
+        color: #c7630b;
+        font-size: 17px;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks1,
+      .banks2,
+      .banks3,
+      h4 {
+        color: #f64f12d3;
+        font-size: 17px;
+      }
+      .main-certificate .bankdetail-container .bankdetails .banks1,
+      .banks2,
+      .banks3,
+      p {
+        color: #070200d3;
+        font-size: 17px;
+        font-weight: 510;
+      }
+      .main-certificate .reciptimg .bankjankari {
+        width: 100%;
+
+        padding-top: 8px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .main-certificate .reciptimg .bankjankari h3 {
+        background: #f9da90cf;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        width: 40%;
+        text-align: center;
+        padding: 2px 0px 1px 0px;
+        margin: 0.1px auto;
+        color: rgb(220, 68, 202);
+      }
+      .mr0 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .mainbank {
+        background: rgba(255, 255, 255, 0.582);
+        opacity: 1;
+      }
+
+      .main-certificate .note {
+        margin: 0;
+        border: none;
+        padding: 0.2px 8px;
+        text-align: center;
+      }
+      .main-certificate .note p {
+        font-size: 10px;
+        font-weight: 690;
+      }
+
+      .main-certificate .reciept-footer {
+        background-image: url("frame2.png");
+        height: 27px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 92.4%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.6px 36px;
+      }
+      .main-certificate .reciept-footer span {
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+      }
+      .main-certificate .reciept-footer p {
+        color: yellow;
+        font-size: 19px;
+      }
+      .main-certificate .signature-point {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        align-items: center;
+      }
+      .main_div_signature img {
+        width: 100%;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="main-certificate">
+        <div class="topinfo-flex">
+          <p>E-mail:badebaba.kundalpur@gmail.com</p>
+          <p>॥ श्री बड़े बाबा नम:॥</p>
+          <p>Web:www.shreebadebaba.com</p>
+        </div>
+        <div class="main-head">
+          <div class="main-head-container">
+            <span class="hedad-sn">
+              <p>&nbsp;</p>
+              <h4>&nbsp;</h4>
+            </span>
+            <span class="head-name">
+              <h2>श्री दिगम्बर जैन सिद्धक्षेत्र कुण्डलगिरि</h2>
+              <p>(सार्व, न्यास क्रं. 17 - ह)</p>
+              <h4>ग्राम- कुण्डलपुर, तह-पटेरा, जिला दमोह 470772 (म.प्र.)</h4>
+            </span>
+            <span class="head-contact">
+              <p>7771835891</p>
+              <p>7771834880</p>
+              <p>दातार प्रति</p>
+            </span>
+          </div>
+          <div class="reciptimg">
+            <div class="reciptbody">
+              <div class="leftdata">
+                <span class="leftitems">
+                  <h2 class="commanh2">
+                    दान रसीद नं :
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </h2>
+                    <h2 class="boldh2"><%= donationReceipt.ReceiptNo %></h2>
+                  
+                </span>
+              </div>
+
+              <div class="rightdata">
+                <span class="rightitems">
+                  <span class="rightitems">
+                    <h2 class="commanh2">
+                      दिनांक : 
+                    </h2>
+                    <h2 class="boldh2"><%= donationReceipt.donation_date %></h2>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <span class="rightitems2">
+              <h2 class="commanh2">
+                दान दातार : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h2>
+              </h2>
+              <h2 class="boldh2"><%= donationReceipt.name %>(<%= donationReceipt.phoneNo %>)</h2>
+            </span>
+            <span class="rightitems2">
+              <h2 class="commanh2">
+                स्थान : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h2>
+              </h2>
+              </h2>
+              <h2 class="boldh2"><%= donationReceipt.address %></h2>
+            </span>
+            <span class="rightitems2">
+              <h2 class="commanh2">
+                दान का मद : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <h2 class="boldh2"><%= donationReceipt.manualItemDetails.type %></h2>
+            </span>
+            <span class="rightitems2">
+              <h2 class="commanh2">
+                विवरण : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <h2 class="boldh2"><%= donationReceipt.manualItemDetails.remark %></h2>
+            </span>
+            <span class="rightitems2">
+              <h2 class="commanh2">दान राशि अंको में :</h2>
+              <h2 class="boldh2"><%= donationReceipt.manualItemDetails.amount %></h2>
+            </span>
+            <span class="rightitems2">
+              <h2 class="commanh2">दान राशि शब्दों में :</h2>
+              <h2 class="boldh2">
+                <span class="boldh2"><%= amount %></span>
+                रूपये ऑनलाइन द्वारा दान स्वरूप सधन्यवाद प्राप्त हुये।
+              </h2>
+            </span>
+            <div class="mainbank">
+              <div class="bankdetail-container">
+                <div class="bankjankari">
+                  <h3>बैंक द्वारा राशि भेजने संबंधी जानकारी</h3>
+                </div>
+                <div class="bankdetails">
+                  <div class="banks1">
+                    <h5 class="mr0">AXIS BANK, DAMOH</h5>
+                    <h4 class="mr0">910010000535130</h4>
+                    <p class="mr0">UTIB0000770</p>
+                  </div>
+                  <div class="banks2">
+                    <h5 class="mr0">HDFC BANK, DAMOH</h5>
+                    <h4 class="mr0">50100160424129</h4>
+                    <p class="mr0">HDFC0000914</p>
+                  </div>
+                  <div class="banks3">
+                    <h5 class="mr0">SBI BANK, ADB-DAMOH</h5>
+                    <h4 class="mr0">10708180064</h4>
+                    <p class="mr0">SBIN0001832</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="note">
+            <p>
+              नोट: 1 यहां अतिशयकारी" बड़े बाबा" की 1500 वर्ष प्राचीन प्रतिमा है
+              तथा 63 जिनालय है व अंतिम अनुबुद्ध केवली श्रीधर स्वामी का निर्वाण
+              स्थल है। 2. यात्रियों / श्रावकों से क्षेत्र में जिनागम अनुकूल आचरण
+              / चरित्र अपेक्षित है। 3. उपरोक्त प्राप्त दान राशि दिग. जैन
+              तेरापंथी आम्नाओं अनुसार क्षेत्र के उद्देश्य की पूर्ति हेतु व्यय की
+              जावेगी 14 क्षेत्र के अंतर्गत संचालित उदासीन आश्रम, औषधालय आदि अन्य
+              चल/अचल सम्पतियाँ एवं प्राप्त दानराशि पर पूर्ण नियंत्रण व स्वामित्व
+              केवल श्री दिग. जैन सिद्धक्षेत्र कुण्डलगिरि, कुण्डलपुर क्षेत्र
+              ट्रस्ट का हैव रहेगा 15. क्षेत्र को दिये गये विशेष दान ट्रस्ट के
+              कॉरपस फण्ड का हिस्सा रहेंगे।
+            </p>
+          </div>
+          <div class="reciept-footer">
+            <span>
+              इस क्षेत्र को दिया गया दान धारा 80G (5) (VI) के अंतर्गत आयकर मुक्त
+              है।
+            </span>
+            <p>PAN NO- AAHTS0546A</p>
+          </div>
+          <div class="signature-point">
+            <div class="main_div_signature">
+              <p>हस्ताक्षर दानदातार</p>
+            </div>
+
+            <div class="main_div_signature">
+              <p>हस्ताक्षर प्राप्तकर्ता</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

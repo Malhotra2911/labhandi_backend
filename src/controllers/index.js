@@ -1,0 +1,13 @@
+module.exports.userController = require('./user.controller');
+module.exports.donationController = require('./donation.controller');
+module.exports.adminController = require('./admin.controller');
+module.exports.voucherController = require('./voucher.controller');
+module.exports.roomController = require('./room.controller');
+module.exports.boliController = require('./boli.controller');
+module.exports.trustController = require('./trust.controller');
+module.exports.committeeController = require('./committee.controller');
+module.exports.vehicleController = require('./vehicle.controller');
+module.exports.hrController = require('./hr.controller');
+module.exports.expenseController = require('./expense.controller');
+module.exports.storeController = require('./store.controller');
+module.exports.bhojnalayController = require('./bhojnalay.controller');
